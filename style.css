@@ -1,0 +1,234 @@
+:root {
+  --color-midnight-navy: #0F2A3D;
+  --color-vibrant-coral: #F07651;
+  --color-teal-spark: #2AB6C1;
+  --color-soft-slate: #F4F7F9;
+  --color-charcoal: #333333;
+  --color-white: #FFFFFF;
+
+  --bg-hero: var(--color-midnight-navy);
+  --bg-body: var(--color-soft-slate);
+  --text-main: var(--color-charcoal);
+  --cta-main: var(--color-vibrant-coral);
+  --accent: var(--color-teal-spark);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+.head {
+  background-color: var(--bg-hero);
+  color: var(--color-white);
+  padding: 2px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  opacity: 0.95;
+  z-index: 1000;
+}
+.head a {
+  margin: 0;
+  font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+}
+.head img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.reach {
+  width: 100%;
+  font-size: .8em;
+  color: var(--color-white);
+  display: none;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 25px;
+  display: none;
+}
+nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: .9em;
+  border-radius: 10px;
+  padding: 7px;
+  position: relative;
+  background-color: var(--accent);
+}
+nav a:hover {
+  background-color: var(--cta-main);
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+  transform: scale(1.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.logo-accent {
+  color: var(--accent);
+}
+.hero {
+  background-color: var(--bg-hero);
+  color: var(--color-white);
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: .9em;
+  margin-bottom: 30px;
+}
+.hero button {
+  background-color: var(--cta-main);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero button:hover {
+  background-color: var(--accent);
+  transition: all 0.3s ease;
+}
+.hero img {
+  width: 40%;
+  height: auto;
+}
+.features {
+  display: flex;
+  position: relative;
+  top: -70px;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+.feature {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+  border-bottom: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.feature:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.feature p {
+  text-align: left;
+}
+.feature img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.testimonials {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+.testimonial {
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 20px;
+  padding: 0 20px;
+  max-width: 800px;
+  display: inline-block;
+  border-bottom: 5px solid var(--accent);
+}
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.testimonial h3 {
+  font-weight: bold;
+  color: var(--text-main);
+}
+.cta {
+  background-color: var(--bg-hero);
+  color: var(--color-white);
+  padding: 40px 20px;
+  text-align: center;
+}
+.cta button {
+  background-color: var(--cta-main);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: .8em;
+}
+.cta h2 {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+.cta button:hover {
+  background-color: var(--accent);
+}
+.footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px;
+}
+.footer p {
+  margin: 0;
+  font-size: .8em;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .hero img {
+    width: 25%;
+  }
+  .hero .text {
+    margin-left: 50px;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  nav {
+    display: flex;
+  }
+  .reach {
+    display: block;
+    margin-left: 900px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .reach {
+    margin-left: 700px;
+  }
+}
